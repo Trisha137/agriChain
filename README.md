@@ -1,6 +1,6 @@
 # AgriChain - Backend
 
-**AgriChain** is a backend API built with TypeScript, Express.js, and Prisma ORM to support agricultural supply chain management. This API handles the creation and storage of retailer submissions containing crop and batch data.
+**AgriChain's** backend API is built with TypeScript, Express.js, and Prisma ORM to support agricultural supply chain management. This API handles the creation and storage of retailer submissions containing crop and batch data.
 
 ---
 
