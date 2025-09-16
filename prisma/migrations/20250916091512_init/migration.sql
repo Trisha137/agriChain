@@ -1,6 +1,3 @@
--- CreateEnum
-CREATE TYPE "public"."Grade" AS ENUM ('A', 'B', 'C');
-
 -- CreateTable
 CREATE TABLE "public"."Retailers" (
     "id" TEXT NOT NULL,
@@ -8,9 +5,9 @@ CREATE TABLE "public"."Retailers" (
     "phone" TEXT NOT NULL,
     "hash" TEXT NOT NULL,
     "crop" TEXT NOT NULL,
-    "quality" "public"."Grade" NOT NULL,
+    "quality" TEXT NOT NULL,
     "quantity" INTEGER NOT NULL,
-    "message" TEXT,
+    "message" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
     CONSTRAINT "Retailers_pkey" PRIMARY KEY ("id")

@@ -52,5 +52,17 @@ app.post('/api/v1', async (req, res) => {
         return res.status(500).json({ Error: "We've encountered an internal server error , kindly check back later." });
     }
 });
+app.get('/api/v1/retailers', async (_req, res) => {
+    try {
+        const allRetailers = await prisma.retailers.findMany();
+        return res.status(200).json(allRetailers);
+    }
+    catch (err) {
+        console.error(err);
+        return res.status(500).json({
+            Error: "Unable to fetch retailers. Please try again later."
+        });
+    }
+});
 app.listen(port, () => { console.log(`[-] Live on port ${port}`); });
 //# sourceMappingURL=index.js.map
